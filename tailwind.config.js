@@ -28,6 +28,22 @@ module.exports = {
       maxWidth: {
         '8xl': '88rem',
       },
+      colors: {
+        bblue: '#3C79A8',
+      },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              color: theme('colors.bblue'),
+              '&:hover': {
+                color: theme('colors.gray.900'),
+              },
+              shadow: 'none',
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [require('@tailwindcss/typography')],
