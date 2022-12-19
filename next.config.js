@@ -13,7 +13,7 @@ const nextConfig = {
 module.exports = withPlugins(
   [
     withMarkdoc(),
-    withExportImages,
+
     // your other plugins here
   ],
   nextConfig
