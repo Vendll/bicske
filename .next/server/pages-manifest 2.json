@@ -1,0 +1,8 @@
+{
+  "/_document": "pages/_document.js",
+  "/informaciok/szakrendelesek": "pages/informaciok/szakrendelesek.js",
+  "/_error": "pages/_error.js",
+  "/": "pages/index.js",
+  "/_app": "pages/_app.js",
+  "/404": "pages/404.html"
+}
