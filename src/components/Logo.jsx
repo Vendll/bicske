@@ -7,10 +7,10 @@ export function Logo() {
   return (
     <>
       <div className="hidden sm:block">
-        <ExportedImage src={logo} alt="Bicske" width={200} height={80} />
+        <Image src={logo} alt="Bicske" width={200} height={80} />
       </div>
       <div className="block sm:hidden">
-        <ExportedImage src={logo_m} alt="Bicske" width={50} height={50} />
+        <Image src={logo_m} alt="Bicske" width={50} height={50} />
       </div>
     </>
   )
