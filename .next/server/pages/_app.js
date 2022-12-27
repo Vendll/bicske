@@ -225,7 +225,8 @@ function Layout({ children , title , navigation , tableOfContents  }) {
     });
 }
 function useTableOfContents(tableOfContents) {
-    let { 0: currentSection , 1: setCurrentSection  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(tableOfContents[0]?.id);
+    var ref;
+    let { 0: currentSection , 1: setCurrentSection  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)((ref = tableOfContents[0]) === null || ref === void 0 ? void 0 : ref.id);
     let getHeadings = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(()=>{
         function* traverse(node) {
             if (Array.isArray(node)) {
@@ -300,18 +301,11 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(997);
-// EXTERNAL MODULE: ./node_modules/next-export-optimize-images/dist/image.js
-var dist_image = __webpack_require__(8782);
-var image_default = /*#__PURE__*/__webpack_require__.n(dist_image);
-// EXTERNAL MODULE: ./node_modules/next-image-export-optimizer/dist/ExportedImage.js
-var ExportedImage = __webpack_require__(1058);
 ;// CONCATENATED MODULE: ./src/images/BICSKE_UJ_t.png
-/* harmony default export */ const BICSKE_UJ_t = ({"src":"/_next/static/media/BICSKE_UJ_t.787ac9c9.png","height":120,"width":300,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAMAAACZFr56AAAAIVBMVEU/fq89eaikqrMobqQ8eKi/zdm0w9I8eag5dKOjo7OUb1NIqIzuAAAACnRSTlM8KNkXAVt1D1n4iFAzzQAAAAlwSFlzAAAuIwAALiMBeKU/dgAAACFJREFUeJxjYGNiZWZkZmFh4ORiYuBgYGBkAIkwMLKzAAAE4ABXgnz1ogAAAABJRU5ErkJggg=="});
+/* harmony default export */ const BICSKE_UJ_t = ({"src":".//_next/static/media/BICSKE_UJ_t.787ac9c9.png","height":120,"width":300,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAMAAACZFr56AAAAIVBMVEU/fq89eaikqrMobqQ8eKi/zdm0w9I8eag5dKOjo7OUb1NIqIzuAAAACnRSTlM8KNkXAVt1D1n4iFAzzQAAAAlwSFlzAAAuIwAALiMBeKU/dgAAACFJREFUeJxjYGNiZWZkZmFh4ORiYuBgYGBkAIkwMLKzAAAE4ABXgnz1ogAAAABJRU5ErkJggg=="});
 ;// CONCATENATED MODULE: ./src/images/BICSKE_UJ_m.png
-/* harmony default export */ const BICSKE_UJ_m = ({"src":"/_next/static/media/BICSKE_UJ_m.1b6fdd55.png","height":75,"width":75,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAS1BMVEXh4uPJfj6ue1D48u1MaXG2TVHh6O7J3enO4Ovn6+/x8vLk6OwOfLinSV84hpmfU2bHnC4Mb7Lldx1AiIrcrR94gqGLsc+Uts5+j535WV7aAAAAFXRSTlMp/v4qAP7y9Pe1sLD4/vf+/vf+9/6oaLe6AAAACXBIWXMAAC4jAAAuIwF4pT92AAAAQklEQVR4nBXGWxaAIAgFwKuigFb2Atz/SjvN14CgLFoIEDeLBqhv8358QGxPbzWGWE3nH40j5ys6SvO1vBUQBnMHfWR5AsMuEUIHAAAAAElFTkSuQmCC"});
+/* harmony default export */ const BICSKE_UJ_m = ({"src":".//_next/static/media/BICSKE_UJ_m.1b6fdd55.png","height":75,"width":75,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAS1BMVEXh4uPJfj6ue1D48u1MaXG2TVHh6O7J3enO4Ovn6+/x8vLk6OwOfLinSV84hpmfU2bHnC4Mb7Lldx1AiIrcrR94gqGLsc+Uts5+j535WV7aAAAAFXRSTlMp/v4qAP7y9Pe1sLD4/vf+/vf+9/6oaLe6AAAACXBIWXMAAC4jAAAuIwF4pT92AAAAQklEQVR4nBXGWxaAIAgFwKuigFb2Atz/SjvN14CgLFoIEDeLBqhv8358QGxPbzWGWE3nH40j5ys6SvO1vBUQBnMHfWR5AsMuEUIHAAAAAElFTkSuQmCC"});
 ;// CONCATENATED MODULE: ./src/components/Logo.jsx
-
-
 
 
 
@@ -320,8 +314,8 @@ function Logo() {
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: "hidden sm:block",
-                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                    src: BICSKE_UJ_t,
+                children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                    src: "/BICSKE_UJ_t.png",
                     alt: "Bicske",
                     width: 200,
                     height: 80
@@ -329,8 +323,8 @@ function Logo() {
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: "block sm:hidden",
-                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                    src: BICSKE_UJ_m,
+                children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                    src: "/BICSKE_UJ_m.png",
                     alt: "Bicske",
                     width: 50,
                     height: 50
@@ -802,7 +796,7 @@ function ThemeSelector(props) {
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                         className: "sr-only",
-                        children: selectedTheme?.name
+                        children: selectedTheme === null || selectedTheme === void 0 ? void 0 : selectedTheme.name
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(LightIcon, {
                         className: "hidden h-4 w-4 fill-sky-400 [[data-theme=light]_&]:block"
@@ -943,10 +937,11 @@ function collectHeadings(nodes, slugify = (0,_sindresorhus_slugify__WEBPACK_IMPO
     return sections;
 }
 function App({ Component , pageProps  }) {
-    let title = pageProps.markdoc?.frontmatter.title;
-    let pageTitle = pageProps.markdoc?.frontmatter.pageTitle || `${pageProps.markdoc?.frontmatter.title}`;
-    let description = pageProps.markdoc?.frontmatter.description;
-    let tableOfContents = pageProps.markdoc?.content ? collectHeadings(pageProps.markdoc.content) : [];
+    var ref, ref1, ref2, ref3, ref4;
+    let title = (ref = pageProps.markdoc) === null || ref === void 0 ? void 0 : ref.frontmatter.title;
+    let pageTitle = ((ref1 = pageProps.markdoc) === null || ref1 === void 0 ? void 0 : ref1.frontmatter.pageTitle) || `${(ref2 = pageProps.markdoc) === null || ref2 === void 0 ? void 0 : ref2.frontmatter.title}`;
+    let description = (ref3 = pageProps.markdoc) === null || ref3 === void 0 ? void 0 : ref3.frontmatter.description;
+    let tableOfContents = ((ref4 = pageProps.markdoc) === null || ref4 === void 0 ? void 0 : ref4.content) ? collectHeadings(pageProps.markdoc.content) : [];
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_1___default()), {
@@ -991,20 +986,6 @@ module.exports = require("focus-visible");
 
 /***/ }),
 
-/***/ 4470:
-/***/ ((module) => {
-
-module.exports = require("fs-extra");
-
-/***/ }),
-
-/***/ 4062:
-/***/ ((module) => {
-
-module.exports = require("next-export-optimize-images/export-images.config.js");
-
-/***/ }),
-
 /***/ 2796:
 /***/ ((module) => {
 
@@ -1012,31 +993,10 @@ module.exports = require("next/dist/shared/lib/head-manager-context.js");
 
 /***/ }),
 
-/***/ 4957:
-/***/ ((module) => {
-
-module.exports = require("next/dist/shared/lib/head.js");
-
-/***/ }),
-
 /***/ 4014:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
-
-/***/ }),
-
-/***/ 744:
-/***/ ((module) => {
-
-module.exports = require("next/dist/shared/lib/image-config-context.js");
-
-/***/ }),
-
-/***/ 5843:
-/***/ ((module) => {
-
-module.exports = require("next/dist/shared/lib/image-config.js");
 
 /***/ }),
 
@@ -1178,13 +1138,6 @@ module.exports = import("@headlessui/react");;
 
 module.exports = import("@sindresorhus/slugify");;
 
-/***/ }),
-
-/***/ 1017:
-/***/ ((module) => {
-
-module.exports = require("path");
-
 /***/ })
 
 };
@@ -1194,7 +1147,7 @@ module.exports = require("path");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [505,664,58], () => (__webpack_exec__(3948)));
+var __webpack_exports__ = __webpack_require__.X(0, [505,664], () => (__webpack_exec__(3948)));
 module.exports = __webpack_exports__;
 
 })();
