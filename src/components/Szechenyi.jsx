@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { useState } from 'react'
 
 const Szechenyi = () => {
@@ -18,7 +17,7 @@ const Szechenyi = () => {
           >
             X
           </button>
-          <Image src="/szec.png" layout="fill" objectFit="contain" />
+          <img src="/szec.png" layout="fill" objectFit="contain" />
         </div>
       )}
     </>
