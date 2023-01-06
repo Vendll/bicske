@@ -10,13 +10,23 @@ const navigation = [
   {
     title: 'Információk',
     links: [
-      { title: 'Elérhetöségek', href: '/' },
-      { title: 'Szakrendelések', href: '/informaciok/szakrendelesek' },
+      { title: 'Elérhetöségek', href: '/', target: false },
+      {
+        title: 'Szakrendelések',
+        href: '/informaciok/szakrendelesek',
+        target: false,
+      },
     ],
   },
   {
     title: 'További linkek',
-    links: [{ title: 'Google', href: 'https://google.com' }],
+    links: [
+      {
+        title: 'Facebook',
+        href: 'https://www.facebook.com/bicskerendelo/',
+        target: true,
+      },
+    ],
   },
 ]
 

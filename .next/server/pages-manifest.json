@@ -1,8 +1,6 @@
 {
-  "/": "pages/index.js",
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/informaciok/szakrendelesek": "pages/informaciok/szakrendelesek.js",
-  "/404": "pages/404.html"
+  "/_error": "pages/_error.js",
+  "/informaciok/szakrendelesek": "pages/informaciok/szakrendelesek.js"
 }

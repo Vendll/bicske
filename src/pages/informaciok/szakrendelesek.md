@@ -282,10 +282,9 @@ Rendelési időben: [06 22 567 560](tel:+3622567560)
 | Orvos               |      Nap      | Rendelési idő |
 | :------------------ | :-----------: | :-----------: |
 | Dr. Keserű Gábor    | Hétfő, Péntek | 9:30 - 14:30  |
-| Dr. Somorjai Attila |     Kedd      | 8:00 - 13:00  |
 | Dr. Balika Zoltán   |    Szerda     | 7:30 - 12:30  |
+| Dr. Somorjai Attila |     Kedd      | 8:00 - 13:00  |
 | Dr. Somorjai Attila |    Szerda     | 14:00 - 19:00 |
-| Dr. Keserű Gábor    |    Péntek     | 9:30 - 14:30  |
 
 ## Szemészet
 

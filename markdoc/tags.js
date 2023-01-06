@@ -42,6 +42,7 @@ const tags = {
       href: { type: String },
     },
   },
+  
 }
 
 export default tags
