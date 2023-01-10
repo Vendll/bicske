@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});Object.defineProperty(exports,"default",{enumerable:true,get:function(){return _default}});var processManifest=function(manifestJson){return manifestJson.trim().split(/\n/g).map(function(line){return JSON.parse(line)})};var _default=processManifest;
