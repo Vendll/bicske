@@ -96,7 +96,7 @@ export function Layout({ children, title, navigation, tableOfContents }) {
             />
           </div>
         </div>
-        <div className="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
+        <div className="min-w-0 max-w-2xl flex-auto px-4 py-4 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
           <article className="prose-a:text-bblue hover:prose-a:underline">
             {(title || section) && (
               <header className="mb-9 space-y-1">
