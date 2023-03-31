@@ -80,6 +80,7 @@ export default function App({ Component, pageProps }) {
     ? collectHeadings(pageProps.markdoc.content)
     : []
 
+  console.log(tableOfContents);
   return (
     <>
       <Head>
