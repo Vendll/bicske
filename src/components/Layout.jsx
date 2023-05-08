@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import clsx from 'clsx'
 
-import { Map } from '@/components/Map'
 import { Logo } from '@/components/Logo'
 import { MobileNavigation } from '@/components/MobileNavigation'
 import { Navigation } from '@/components/Navigation'
@@ -11,6 +10,11 @@ import { Prose } from '@/components/Prose'
 import { Search } from '@/components/Search'
 import { ThemeSelector } from '@/components/ThemeSelector'
 import Szechenyi from './Szechenyi'
+import dynamic from 'next/dynamic'
+
+const Map = dynamic(() => import('./Map'), {
+  ssr: false,
+})
 
 function Header({ navigation }) {
   let [isScrolled, setIsScrolled] = useState(false)

@@ -22,8 +22,8 @@ const navigation = [
     title: 'További linkek',
     links: [
       {
-        title: 'Facebook',
-        href: 'https://www.facebook.com/bicskerendelo/',
+        title: 'Efi',
+        href: 'https://efi.bicskerendelo.hu/',
         target: true,
       },
     ],
@@ -80,7 +80,6 @@ export default function App({ Component, pageProps }) {
     ? collectHeadings(pageProps.markdoc.content)
     : []
 
-  console.log(tableOfContents);
   return (
     <>
       <Head>

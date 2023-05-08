@@ -1,14 +1,30 @@
-export function Map() {
+import { useState, useEffect } from 'react'
+import 'leaflet/dist/leaflet.css'
+import { MapContainer, TileLayer, Marker, useMap, Popup } from 'react-leaflet'
+
+export function ChangeView({ coords }) {
+  const map = useMap()
+  map.setView(coords, 16)
+  return null
+}
+
+export default function Map() {
+  const [geoData, setGeoData] = useState({ lat: 47.492193, lng: 18.635918 })
+  const center = [geoData.lat, geoData.lng]
   return (
-    <div className="mt-12 overflow-hidden bg-slate-900 dark:-mb-32 dark:-mt-[4.5rem] dark:pb-32 dark:pt-[4.5rem] dark:lg:-mt-[4.75rem] dark:lg:pt-[4.75rem]">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d618.0310131240433!2d18.63537956323205!3d47.492452230716694!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x13e415f61bd434a2!2zQmljc2tlaSBFZ8Opc3pzw6lnw7xneWkgS8O2enBvbnQ!5e0!3m2!1sen!2shu!4v1671447939766!5m2!1sen!2shu"
-        width="100%"
-        height="450"
-        allowFullScreen=""
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
+    <MapContainer center={center} zoom={16} style={{ height: '50vh' }}>
+      <TileLayer
+        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      {geoData.lat && geoData.lng && (
+        <Marker position={[geoData.lat, geoData.lng]}>
+          <Popup>
+            Bicskei Egészségügyi Központ <br /> 2060 Bicske, Kossuth tér 17.
+          </Popup>
+        </Marker>
+      )}
+      <ChangeView coords={center} />
+    </MapContainer>
   )
 }
