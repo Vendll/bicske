@@ -22,7 +22,7 @@ const navigation = [
     title: 'További linkek',
     links: [
       {
-        title: 'Efi',
+        title: 'EFI',
         href: 'https://efi.bicskerendelo.hu/',
         target: true,
       },
