@@ -3,3 +3,11 @@
 @import './prism.css';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.leaflet-control-attribution {
+  display: none;
+}
+
+.ScrollUpButton__Container {
+  left: 20px !important;
+}

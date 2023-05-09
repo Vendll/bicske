@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { slugifyWithCounter } from '@sindresorhus/slugify'
-
+import { CircleArrow as ScrollUpButton } from 'react-scroll-up-button'
 import { Layout } from '@/components/Layout'
 
 import 'focus-visible'
@@ -92,6 +92,7 @@ export default function App({ Component, pageProps }) {
         tableOfContents={tableOfContents}
       >
         <Component {...pageProps} />
+        <ScrollUpButton />
       </Layout>
     </>
   )

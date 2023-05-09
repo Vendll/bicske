@@ -70,7 +70,6 @@ export function Layout({ children, title, navigation, tableOfContents }) {
   )
 
   const var1 = groupByFirstLetter(tableOfContents)
-  console.log(var1)
   let currentSection = useTableOfContents(var1)
 
   function isActive(section) {
