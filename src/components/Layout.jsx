@@ -63,6 +63,7 @@ function Header({ navigation }) {
 export function Layout({ children, title, navigation, tableOfContents }) {
   let router = useRouter()
   let isHomePage = router.pathname === '/'
+  let isSzakrendelesekPage = router.pathname === '/informaciok/szakrendelesek'
   let allLinks = navigation.flatMap((section) => section.links)
   let linkIndex = allLinks.findIndex((link) => link.href === router.pathname)
   let section = navigation.find((section) =>
@@ -116,28 +117,29 @@ export function Layout({ children, title, navigation, tableOfContents }) {
                 )}
               </header>
             )}
-            <ul className="mb-12 flex grow flex-wrap gap-x-4 gap-y-2">
-              {var1.map((section) => (
-                <li key={section.letter}>
-                  <h3>
-                    <Link href={`#${section.section.id}`}>
-                      <a
-                        className={clsx(
-                          isActive(section)
-                            ? 'text-xl font-bold text-sky-500'
-                            : 'text-xl font-bold text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
-                        )}
-                      >
-                        {section.letter}
-                      </a>
-                    </Link>
-                  </h3>
-                </li>
-              ))}
-            </ul>
+            {isSzakrendelesekPage && (
+              <ul className="mb-12 flex grow flex-wrap gap-x-4 gap-y-2">
+                {var1.map((section) => (
+                  <li key={section.letter}>
+                    <h3>
+                      <Link href={`#${section.section.id}`}>
+                        <a
+                          className={clsx(
+                            isActive(section)
+                              ? 'text-xl font-bold text-sky-500'
+                              : 'text-xl font-bold text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
+                          )}
+                        >
+                          {section.letter}
+                        </a>
+                      </Link>
+                    </h3>
+                  </li>
+                ))}
+              </ul>
+            )}
 
             <Prose>{children}</Prose>
-
             {isHomePage && <Map />}
           </article>
         </div>

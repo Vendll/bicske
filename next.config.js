@@ -5,7 +5,7 @@ const withPlugins = require('next-compose-plugins')
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-  trailingSlash: true,
+  assetPrefix: './',
 }
 
 // module.exports = withMarkdoc()(nextConfig)
